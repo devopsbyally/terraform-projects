@@ -1,0 +1,6 @@
+Create a custom IAM policy that allows read and write access to a specific S3
+bucket (use bucket name: "tf-s3bucket-11.11" which was created in question1)
+then create an IAM role that can be assigned to an EC2 instance using Terraform.
+
+Validation:- Also try to login to ec2, create one file and run aws cli command to upload
+create file to s3 bucket

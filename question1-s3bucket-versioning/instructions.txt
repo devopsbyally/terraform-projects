@@ -1,0 +1,8 @@
+Create an S3 bucket with versioning enabled, upload an object, and make the bucket
+public so that anyone can access it using Terraform
+
+Note: Use variables as much as possible, such as for the bucket name, tags, etc.
+Also, use an output block to display the bucket name and object URL.
+
+Hint : Add a bucket policy to make the bucket public and also Enable public access for the
+Bucket
