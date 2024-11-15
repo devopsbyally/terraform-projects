@@ -1,12 +1,12 @@
 variable "bucket_name" {
   type        = string
-  default     = "tf-s3bucket-11.11" 
+  default     = "tf-s3bucket-11.12" 
 }
 
-variable "bucket_pri_acl" {
-  type        = string
-  default     = "private"  
-}
+#variable "bucket_pri_acl" {
+ # type        = string
+  #default     = "private"  
+#}
 
 variable "bucket_tags" {
   type        = map(string)
