@@ -7,11 +7,11 @@ data "aws_iam_policy_document" "allow_public_access" {
     }
 
     actions = [
-      "s3:GetObject",  # Allow public read access to objects
+      "s3:GetObject",  
     ]
 
     resources = [
-      "${aws_s3_bucket.s3-bucket.arn}/*",  # Apply to all objects in the bucket
+      "${aws_s3_bucket.s3-bucket.arn}/*",  
     ]
   }
 }

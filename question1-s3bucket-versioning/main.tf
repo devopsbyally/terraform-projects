@@ -1,7 +1,16 @@
 # STEP-1: create s3 bucket
 resource "aws_s3_bucket" "s3-bucket" {
   bucket = var.bucket_name
-  tags = var.bucket_tags
+  tags   = var.bucket_tags
+}
+
+resource "aws_s3_bucket_public_access_block" "s3-bucket-public-access-block" {
+  bucket = aws_s3_bucket.s3-bucket.id
+
+  block_public_acls       = false  # Allow public ACLs
+  block_public_policy     = false  # Allow public policies
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
 
 # STEP-2: add private acl
