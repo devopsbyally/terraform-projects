@@ -1,9 +1,8 @@
-# Data source to fetch the latest RHEL AMI
 data "aws_ami" "rhel" {
   most_recent = true
-  owners      = ["self"] 
+  owners = ["309956199498"]
   filter {
     name   = "name"
-    values = ["RHEL-8.*-HVM-*"]
+    values = ["RHEL-8*"]
   }
 }
