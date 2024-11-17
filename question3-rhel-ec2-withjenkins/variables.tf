@@ -1,16 +1,11 @@
 variable "instance_type" {
-    type = string
-    default = t2.micro 
+  type = string
 }
 
 variable "key_name" {
-    type = string
-    default = rhel
+  type = string
 }
 
 variable "tags" {
-    type = map(string)
-    default = { 
-        "Name" = "jenkins-server-rhel"
-    }
+  type = map(string)
 }
