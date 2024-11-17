@@ -1,5 +1,6 @@
 Create an Amazon EC2 instance running RHEL (Red Hat Enterprise Linux) and attach a
-security group with port 22 (SSH) and port 8080 and also install and configure Jenkins
-via userdata script. You can use AWS Data Source to fetch the latest RHEL AMI.
+security group with port 22 (SSH) and port 8080 (HTTPS)
+Then, install and configure Jenkins via userdata script. 
+You can use AWS Data Source to fetch the latest RHEL AMI.
 
 Note : use variables and output as much as possible.
