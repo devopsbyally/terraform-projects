@@ -1,0 +1,5 @@
+Create an EC2 instance in a custom VPC and subnet, while using Terraform to
+dynamically fetch the custom VPC and subnet information via data sources, and attach
+sg to ec2 by creating in custom VPC.
+
+Hint: Manually create Custom VPC and subnet on AWS console
