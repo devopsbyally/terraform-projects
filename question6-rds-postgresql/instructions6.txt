@@ -1,0 +1,15 @@
+Create an AWS RDS PostgreSQL database with two instances using Terraform
+
+Note: use secret to create db user and password and also create custom db parameter
+and option group and attach while creating RDS.
+
+Hint: if you don’t know how to create AWS RDS then try manually on the console and
+then start doing a project using terraform. 
+Also read about AWS RDS service.
+
+---------------------------------------------------------------------------------------
+
+step 1- create rds PostgreSQL database w/ 2 instances
+step 2- create db user and password
+step 3- create custom db parameter
+step 4- create option group and attach while creating RDS

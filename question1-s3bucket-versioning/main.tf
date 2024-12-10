@@ -12,7 +12,6 @@ resource "aws_s3_bucket_public_access_block" "s3-bucket-public-access-block" {
   block_public_policy     = false  # Allow public policies
   ignore_public_acls      = false
   restrict_public_buckets = false
-  
 }
 
 # STEP-3: enable versioning on s3 bucket
@@ -31,20 +30,11 @@ resource "aws_s3_object" "my-first-object" {
   #acl = var.object_pub_acl #remove
 }
 
-# STEP-5: attch policy, make the bucket objects public
+# STEP-5: Attach policy, make the bucket objects public
 resource "aws_s3_bucket_policy" "allow_public_access" {
-  bucket = aws_s3_bucket.s3-bucket.id  
-# This policy allows public read access to all objects within the bucket
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Sid = "PublicReadGetObject"
-        Effect = "Allow"
-        Action = "s3:*"
-        Resource = "arn:aws:s3:::${aws_s3_bucket.s3-bucket.bucket}/*"
-        Principal = "*"
-      }
-    ]
+  bucket = aws_s3_bucket.s3-bucket.id
+  # This policy allows public read access to all objects within the bucket
+  policy = templatefile("${path.module}/attach-policy-bucket.json", {
+    bucket_name = aws_s3_bucket.s3-bucket.bucket
   })
 }

@@ -1,0 +1,7 @@
+Create an 2 RHEL EC2 instance with user data that installs the AWS CLI, Nginx, wget,
+configures Nginx to host a static website, and output provides the public URL , public
+dns and instance ID
+
+
+Note :- for accessing website port 80 should be open so need to create sg and also use
+count meta argument to create 2 servers.

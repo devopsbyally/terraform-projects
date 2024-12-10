@@ -1,0 +1,3 @@
+Create a custom Terraform module for provisioning EC2 instances with options to
+specify the number of instances and also have option create_eip true and false . 
+If true then it will create eip and attach to ec2.
