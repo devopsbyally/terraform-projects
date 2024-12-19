@@ -7,5 +7,5 @@ subnet_id      = "subnet-08eaa7d746962455d"
 instance_count = 2
 create_eip     = true
 tags = { 
-  Name = "my-ec2-module-demo" #ec2 instance tag
+  Environment = "Dev"
 }
