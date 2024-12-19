@@ -1,0 +1,3 @@
+A. Create a custom module for EC2 using auto scaling group
+B. Create a custom module for SG using dynamics block.
+C. create a custom module for ALB
